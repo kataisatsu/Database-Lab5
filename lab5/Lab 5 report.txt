@@ -1,0 +1,37 @@
+REPORT : 
+
+Task 1: " None: all relations of the Lab 4 solution are in BCNF" 
+
+In every relation, each FD has the primary key on the left side, so every determinant is a superkey. Relations made only of their key (e.g. Advises, Attached) have no non-trivial FD, so they are BCNF too. 
+
+Role of each team member: 
+
+Every member of the team played a crucial role into the identification and realization of this lab, for example Karam Mohammed was the first one that stepped up and gave us a blueprint of the work and explained to the rest of the group some notions that weren't clear in which helped figuring out what to do and how to properly do this lab. A final revision was made by Aymane Jawadi and Amine Imakor before finally giving the thumbs up. 
+
+Key challenges and how they were resolved: 
+
+Which normal forms to use. We weren’t sure at first whether to consider 2NF. The course slides only mention it as historical on the third slide, but after that there wasn't any specifications that would help us determinate if the normal form was 2NF, so we sticked to what was present in the course material without doing unnecessary research and only used 1NF, 3NF and BCNF. 
+
+Hidden dependencies. Not every dependency was given directly. In Equipment Inventory, for example, serialNo → manufacturer only appears by combining serialNo → modelId and modelId → manufacturer. Computing closures helped us find these dependencies and the candidate keys. 
+
+Lossless decomposition. Every decomposition is lossless, and this was trivial. Rather than proving it separately each time, we built the decompositions so that it shows directly: the attribute shared by R₁ and R₂ is always the primary key of R₁. 
+
+Justification of the conversion choices: 
+
+Decomposition method: we split each relation on the FD that violates BCNF, with R₁ = X⁺ and R₂ = X plus the remaining attributes. 
+
+ 
+
+Shared attribute: X is the key of R₁ and also stays in R₂ to link the two. 
+
+ 
+
+One split was enough: every resulting relation is in BCNF. 
+
+ 
+
+BCNF over 3NF: all FDs were preserved, so there was no need to stop at 3NF 
+
+Assumptions: 
+
+No particular assumptions were made. Everything we did followed what was seen and covered in the course material. Unlike previous labs, here we had a specific method that we applied to get our results. 
